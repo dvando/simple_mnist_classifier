@@ -1,0 +1,9 @@
+title: TributeNet Training
+credit: VIXMO AI
+data_path: ../data/train.csv
+logger: tensorboard
+hyperparam:
+  batch_size: 512
+  learning_rate: 1e-3
+  epochs: 5
+  val_every: 2

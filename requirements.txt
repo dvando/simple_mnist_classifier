@@ -1,0 +1,10 @@
+numpy
+opencv_python
+pandas
+torch
+torchvision
+torchsummary
+tensorboard
+tqdm
+kornia
+gradio
