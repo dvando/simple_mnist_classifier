@@ -10,7 +10,7 @@ from models import TributeNet
 class Predictor():
     def __init__(self) -> None:
         self.model = TributeNet().cuda()
-        ckpt= torch.load('../models/09050835/epoch5.pth', map_location='cpu')
+        ckpt= torch.load('../model/myNet.pth', map_location='cpu')
         self.model.load_state_dict(ckpt)        
 
     def inference(self, img):
@@ -43,8 +43,7 @@ def main():
 
     with demo:
         gr.Markdown("""
-        # MNIST Digit Classification by VIXMO AI TEAM
-        || TributeNet ||
+        # Simple MNIST Digit Classification by Agung Aldevando
         """)
         with gr.Row():
             img_input= gr.Image()
