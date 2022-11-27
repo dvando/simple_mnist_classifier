@@ -1,2 +1,2 @@
-# simple_mnist_classifier
+# Simple MNIST Digit Classifier
 Simple MNIST digit classifier with Gradio demo.
