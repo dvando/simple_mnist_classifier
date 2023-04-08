@@ -5,11 +5,11 @@ import pandas as pd
 import cv2
 import torch.nn.functional as F
 
-from models import TributeNet
+from models import MyNet
 
 class Predictor():
     def __init__(self) -> None:
-        self.model = TributeNet().cuda()
+        self.model = MyNet().cuda()
         ckpt= torch.load('../model/myNet.pth', map_location='cpu')
         self.model.load_state_dict(ckpt)        
 

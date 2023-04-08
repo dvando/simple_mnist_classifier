@@ -19,7 +19,7 @@ def _cbr_layer(in_channels, out_channels, kernel_size, groups=1, stride=1, activ
                         bias=False),
                 nn.BatchNorm2d(out_channels, affine=True, eps=1e-5, momentum=0.1))
 
-class TributeNet(nn.Module):
+class MyNet(nn.Module):
     def __init__(self) -> None:
         super().__init__()
         self.cbr1 = _cbr_layer(1, 16, 3, stride=1)
@@ -58,7 +58,7 @@ class TributeNet(nn.Module):
 
 
 if __name__ == '__main__':
-    model = TributeNet().cuda()
+    model = MyNet().cuda()
     dummy = torch.randn(1, 1, 28, 28).cuda()
     summary(model, (1, 28, 28))
     out = model(dummy)

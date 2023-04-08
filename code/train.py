@@ -3,7 +3,7 @@ import torch.nn as nn
 import datetime
 import os
 from dataset import MnistDataset
-from models import TributeNet
+from models import MyNet
 from tqdm import tqdm
 from torch.utils.data import DataLoader
 from torch.utils.tensorboard import SummaryWriter
@@ -83,7 +83,7 @@ class Trainer():
 def main():
     stream = open('config.yaml', 'r')
     data = yaml.load(stream, Loader=yaml.CLoader)
-    model = TributeNet()
+    model = MyNet()
     trainer = Trainer(model, data)
     trainer.train()
 
