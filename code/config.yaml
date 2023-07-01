@@ -1,5 +1,4 @@
-title: TributeNet Training
-credit: VIXMO AI
+title: MyNet Training
 data_path: ../data/train.csv
 logger: tensorboard
 hyperparam:
